@@ -1,0 +1,46 @@
+{% extends "AppBlog/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+
+<h1 class="mb-5">Bienvenidos a mi Blog</h1>
+
+{% endblock %}
+
+{% block subtitulo %}
+
+<p>Aquí encontrarás todo lo relacionado a los últimos avances en Ciencia y Tecnología.</p>
+
+<h1>{{ mensaje }}</h1>
+
+{% endblock %}
+
+{% block enlace_pages %}
+
+<h1 class="mb-5">Para leer los últimos posts, ingresá a "Pages".</h1>
+
+<!-- Divider-->
+<hr class="my-4" />
+
+{% endblock %}
+
+{% block enlace_login %}
+
+<h1 class="mb-5">Para cargar un nuevo post, logueate ingresando a "Login".</h1>
+
+<!-- Divider-->
+<hr class="my-4" />
+
+{% endblock %}
+
+{% block enlace_signup %}
+
+<h1 class="mb-5">Y si no estás registrado, ingresá a "Signup" y realiza el registro.</h1>
+
+<!-- Divider-->
+<hr class="my-4" />
+
+{% endblock %}
+
+

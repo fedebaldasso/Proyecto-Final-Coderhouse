@@ -1,0 +1,43 @@
+{% extends "AppBlog/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+
+    <h1 class="text-uppercase">{{ post.seccion }}</h1> 
+
+{% endblock %}
+
+
+{% block page %}
+<div class="container">
+    <div class="imagen" style="text-align: left;">
+        {{ post.imagen | safe }}
+    </div>
+    <br>
+    <div class="titulo" style="text-align: center;">
+        <h1>{{ post.titulo }}</h1> 
+    </div>
+    <br>
+    <div class="subtitulo" style="text-align: center;">
+        <h5> {{ post.subtitulo }} </h5>
+    </div>
+    <br>
+    <div class="contenido" style="text-align: justify;">
+        <p>{{ post.contenido | safe}}</p>
+    </div>
+    <div class="autor" style="text-align: center;">
+        <p class="post-meta">
+            Posted by
+            <a href="#!"> {{ post.autor }} </a>
+            on {{ post.fecha_publicacion }}
+        </p>    
+    </div>    
+    <div class="boton" style="text-align: center;">
+        <a class="btn btn-primary text-uppercase" href="{% url 'pages' %}">Volver a Pages</a>
+    </div>
+    <br>
+    
+</div>
+
+{% endblock %}

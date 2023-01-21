@@ -1,0 +1,32 @@
+{% extends "AppBlog/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">FORMULARIO DE INGRESO</h1>
+{% endblock %}
+
+
+{% block login %}
+
+<div class="mje">
+    <h3>{{ mensaje }}</h3>
+</div>
+<div class="container">
+    <div class="form">
+        <form action="{% url 'login' %}" method="POST"> {% csrf_token %}
+    
+            <table>
+                {{ form.as_table }}
+            </table>
+            <br>
+        <div class="boton" style="text-align: center;">
+            <input type="submit" class="btn btn-primary text-uppercase" value="INGRESAR">
+        </div>           
+        
+        </form>
+    </div>        
+</div>
+<br>
+
+{% endblock %}

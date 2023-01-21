@@ -1,0 +1,30 @@
+{% extends "AppBlog/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">FORMULARIO PARA EDITAR POSTS</h1>
+
+<h4>{{ mensaje }}</h4>
+
+{% endblock %}
+
+{% block update %}
+
+<h2>EDITANDO POST: {{ post }} </h2>
+
+<form action="{% url 'updatePage' post.id %}" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+    
+    <table>
+        {{ form.as_p }}
+        {{ form.media }}
+
+    </table>
+    <div class="boton" style="text-align: center;">
+        <input type="submit" class="btn btn-primary text-uppercase" value="Guardar Cambios">
+    </div>
+
+</form>
+<br>
+
+{% endblock %}
